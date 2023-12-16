@@ -14,7 +14,7 @@ export const LeadForm = () => {
 		if (data) {
 			navigate('/people');
 		}
-	}, []);
+	}, [navigate]);
 
 	const { isDark } = useContext(ThemeContext);
 	const [formData, setFormData] = useState<IFormData>({
@@ -123,7 +123,7 @@ export const LeadForm = () => {
 					<div>
 						<div
 							className="default-button"
-							onClick={handleSubmit}
+							onClick={() => handleSubmit()}
 						>
 							Cadastrar
 						</div>
